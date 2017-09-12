@@ -23,6 +23,8 @@ public class Main {
 		stuarr[0]=s1;
 		stuarr[1]=s3;
 		System.out.println("element"+s1);
+		System.out.println("element"+s2);
+		System.out.println("element"+s3);
 		sgrp.setStudents(stuarr);
 		System.out.println("nulll?"+sgrp.getStudent(0));
 		System.out.println("nulll?"+sgrp.getStudent(1));
@@ -33,8 +35,7 @@ public class Main {
 		System.out.println("added"+sgrp.getStudent(0));
 		System.out.println("added"+sgrp.getStudent(1));
 		System.out.println("added"+sgrp.getStudent(2));
-		sgrp.removeFromElement(s1);
-
+		sgrp.removeToElement(s3);
 		System.out.println("remo"+sgrp.getStudent(0));
 		System.out.println("remo"+sgrp.getStudent(1));
 		System.out.println("remo"+sgrp.getStudent(2));
