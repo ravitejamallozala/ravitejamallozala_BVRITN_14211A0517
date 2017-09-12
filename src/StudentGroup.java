@@ -351,37 +351,6 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public Student getNextStudent(Student student) {
-		// Add your implementation here
-//		if(this.students==null) {
-//			throw new IllegalArgumentException();
-//		}
-//		else if(this.students.length==this.getSize()){
-//			throw new IllegalArgumentException();
-//			
-//		}
-//		else {
-//			Student temp=student;
-//			int siz=this.getSize(),flag=0;
-//			int i=0;
-//			for(i=0;i<this.students.length;i++) {
-//				if(temp==this.getStudent(i)) {
-//					
-//					flag=1;
-//					break;
-//				}
-//			}
-//			if(flag==0) {
-//				throw new IllegalArgumentException("Student not exist");
-//				
-//			}else {
-//				if(i+1<this.students.length)
-//					return this.getStudent(i+1);
-//				else {
-//					throw new IllegalArgumentException("Student not exist");
-//					}
-//			}
-//			
-//		}
 		return null;
 	}
 		
