@@ -181,6 +181,7 @@ public class StudentGroup implements StudentArrayOperation {
 				this.setStudent(this.getStudent(i+1), i);
 			}
 			this.setStudent(null, siz);
+			this.setSize(siz-1);
 		}
 		
 	}
@@ -188,6 +189,24 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void remove(Student student) {
 		// Add your implementation here
+		if(this.students==null) {
+			throw new IllegalArgumentException();
+		}
+		else {
+			Student temp=student;
+			int siz=this.getSize(),flag=0;
+			for(int i=0;i<this.students.length;i++) {
+				if(temp==this.getStudent(i)) {
+					this.remove(i);
+					flag=1;
+					break;
+				}
+			}
+			if(flag==0) {
+				throw new IllegalArgumentException("Student not exist");
+			}
+		}
+		
 	}
 
 	@Override
