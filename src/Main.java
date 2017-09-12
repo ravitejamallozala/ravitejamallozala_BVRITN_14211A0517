@@ -21,18 +21,19 @@ public class Main {
 		Student [] stuarr= new Student[2];
 		
 		stuarr[0]=s1;
-		stuarr[1]=s2;
+		stuarr[1]=s3;
+		System.out.println("element"+s1);
 		sgrp.setStudents(stuarr);
 		System.out.println("nulll?"+sgrp.getStudent(0));
 		System.out.println("nulll?"+sgrp.getStudent(1));
 		System.out.println("nulll?"+sgrp.getStudent(2));
-		sgrp.add(s3,1);
+		sgrp.add(s2,1);
 		
 		
 		System.out.println("added"+sgrp.getStudent(0));
 		System.out.println("added"+sgrp.getStudent(1));
 		System.out.println("added"+sgrp.getStudent(2));
-		sgrp.removeFromIndex(0);
+		sgrp.removeFromElement(s1);
 
 		System.out.println("remo"+sgrp.getStudent(0));
 		System.out.println("remo"+sgrp.getStudent(1));
