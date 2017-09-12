@@ -123,6 +123,19 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void addLast(Student student) {
 		// Add your implementation here
+		if(students==null) {
+			throw new IllegalArgumentException("Illegl Argument");
+		}
+		else if(this.students.length==this.getSize()){
+			throw new IllegalArgumentException("Illegl Argument");
+			
+		}
+		else {
+			Student temp=student;
+			int siz=this.getSize();
+			//System.out.println("size is "+siz);
+			this.setStudent(student, siz);
+		}
 	}
 
 	@Override

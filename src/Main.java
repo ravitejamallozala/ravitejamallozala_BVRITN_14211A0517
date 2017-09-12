@@ -24,10 +24,14 @@ public class Main {
 		stuarr[1]=s2;
 		sgrp.setStudents(stuarr);
 		System.out.println("nulll?"+sgrp.getStudent(0));
-		sgrp.addFirst(s3);
+		System.out.println("nulll?"+sgrp.getStudent(1));
+		System.out.println("nulll?"+sgrp.getStudent(2));
+		sgrp.addLast(s3);
 		
-		System.out.println(s3);
+		
 		System.out.println("added"+sgrp.getStudent(0));
+		System.out.println("added"+sgrp.getStudent(1));
+		System.out.println("added"+sgrp.getStudent(2));
 		
 		
 		
