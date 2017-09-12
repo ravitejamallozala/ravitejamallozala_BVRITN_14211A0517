@@ -13,7 +13,7 @@ import java.util.Date;
  */
 public class StudentGroup implements StudentArrayOperation {
 
-	private Student[] students;
+	public Student[] students;
 	private int size=0;
 	
 
@@ -55,15 +55,13 @@ public class StudentGroup implements StudentArrayOperation {
 		}
 		else {
 			int len = students.length;
-			if(this.students.length<=len) {
+			
 				for(int i=0;i<len;i++) {
 					this.students[i]=students[i];
 				}
 				this.setSize(len);	
-			}
-			else {
-				throw new IllegalArgumentException("Illegl index");
-			}
+			
+			
 		
 		}
 	}
@@ -105,12 +103,13 @@ public class StudentGroup implements StudentArrayOperation {
 		if(students==null) {
 			throw new IllegalArgumentException("Illegl Argument");
 		}
-//		else if(this.students.length==this.getSize()){
-//			throw new IllegalArgumentException("Illegl Argument");
-//			
-//		
+		else if(this.students.length==this.getSize()){
+			throw new IllegalArgumentException("Illegl Argument");
+			
+		}
 		else {
-			Student temp=student,pick;		
+			Student temp=student;
+			Student pick;		
 			int siz=this.getSize();
 			for(int i=0;i<siz+1;i++) {
 				pick=this.students[i];
