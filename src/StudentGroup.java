@@ -102,6 +102,23 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void addFirst(Student student) {
 		// Add your implementation here
+		if(students==null) {
+			throw new IllegalArgumentException("Illegl Argument");
+		}
+		else if(this.students.length==this.getSize()){
+			throw new IllegalArgumentException("Illegl Argument");
+			
+		
+		}else {
+			Student temp=student,pick;		
+			int siz=this.getSize();
+			for(int i=0;i<siz+1;i++) {
+				pick=this.students[i];
+				this.students[i]=temp;
+				temp=pick;
+			}
+			this.setSize(siz+1);
+		}
 	}
 
 	@Override
@@ -112,6 +129,7 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void add(Student student, int index) {
 		// Add your implementation here
+		
 	}
 
 	@Override
