@@ -212,6 +212,28 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void removeFromIndex(int index) {
 		// Add your implementation here
+		if(this.students==null) {
+			throw new IllegalArgumentException();
+		}
+		else if(index <0 || index >=this.students.length  ){
+			throw new IllegalArgumentException();
+			
+		
+		}else {
+			index= index+1;
+			int count=0;
+			int siz=this.getSize();
+			if( index <=siz-1) {
+				for(int i=index;i<siz;i++) {
+					this.setStudent(null, i);
+					 count++;
+				}
+				this.setSize(siz-count);
+			}
+			
+		}
+		
+		
 	}
 
 	@Override

@@ -32,7 +32,7 @@ public class Main {
 		System.out.println("added"+sgrp.getStudent(0));
 		System.out.println("added"+sgrp.getStudent(1));
 		System.out.println("added"+sgrp.getStudent(2));
-		sgrp.remove(s1);
+		sgrp.removeFromIndex(0);
 
 		System.out.println("remo"+sgrp.getStudent(0));
 		System.out.println("remo"+sgrp.getStudent(1));
