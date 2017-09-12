@@ -105,11 +105,11 @@ public class StudentGroup implements StudentArrayOperation {
 		if(students==null) {
 			throw new IllegalArgumentException("Illegl Argument");
 		}
-		else if(this.students.length==this.getSize()){
-			throw new IllegalArgumentException("Illegl Argument");
-			
-		
-		}else {
+//		else if(this.students.length==this.getSize()){
+//			throw new IllegalArgumentException("Illegl Argument");
+//			
+//		
+		else {
 			Student temp=student,pick;		
 			int siz=this.getSize();
 			for(int i=0;i<siz+1;i++) {
