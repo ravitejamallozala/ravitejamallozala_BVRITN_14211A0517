@@ -57,7 +57,8 @@ public class StudentGroup implements StudentArrayOperation {
 			int len = students.length;
 			
 				for(int i=0;i<len;i++) {
-					this.students[i]=students[i];
+					this.setStudent(students[i], i);
+					
 				}
 				this.setSize(len);	
 			
@@ -68,11 +69,11 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student getStudent(int index) {
 		// Add your implementation here
-		if(students==null  ) {
-			throw new IllegalArgumentException("Illegl Argument");
+		if(this.students==null  ) {
+			throw new IllegalArgumentException();
 		}
 		else if(index <0 || index >=this.students.length ){
-			throw new IllegalArgumentException("Illegl Argument");
+			throw new IllegalArgumentException();
 			
 		
 		}else {
@@ -84,11 +85,11 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void setStudent(Student student, int index) {
 		// Add your implementation here
-		if(students==null) {
-			throw new IllegalArgumentException("Illegl Argument");
+		if(this.students==null) {
+			throw new IllegalArgumentException();
 		}
 		else if(index <0 || index >=this.students.length ){
-			throw new IllegalArgumentException("Illegl Argument");
+			throw new IllegalArgumentException();
 			
 		
 		}else {
@@ -100,11 +101,11 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void addFirst(Student student) {
 		// Add your implementation here
-		if(students==null) {
-			throw new IllegalArgumentException("Illegl Argument");
+		if(this.students==null) {
+			throw new IllegalArgumentException();
 		}
 		else if(this.students.length==this.getSize()){
-			throw new IllegalArgumentException("Illegl Argument");
+			throw new IllegalArgumentException();
 			
 		}
 		else {
@@ -112,8 +113,8 @@ public class StudentGroup implements StudentArrayOperation {
 			Student pick;		
 			int siz=this.getSize();
 			for(int i=0;i<siz+1;i++) {
-				pick=this.students[i];
-				this.students[i]=temp;
+				pick=this.getStudent(i);
+				this.setStudent(temp, i);
 				temp=pick;
 			}
 			this.setSize(siz+1);
@@ -123,11 +124,11 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void addLast(Student student) {
 		// Add your implementation here
-		if(students==null) {
-			throw new IllegalArgumentException("Illegl Argument");
+		if(this.students==null) {
+			throw new IllegalArgumentException();
 		}
 		else if(this.students.length==this.getSize()){
-			throw new IllegalArgumentException("Illegl Argument");
+			throw new IllegalArgumentException();
 			
 		}
 		else {
@@ -135,18 +136,53 @@ public class StudentGroup implements StudentArrayOperation {
 			int siz=this.getSize();
 			//System.out.println("size is "+siz);
 			this.setStudent(student, siz);
+			this.setSize(siz+1);
 		}
 	}
 
 	@Override
 	public void add(Student student, int index) {
+		
 		// Add your implementation here
+		if(this.students==null || index <0 || index >=this.students.length ) {
+			throw new IllegalArgumentException();
+		}
+		else if(this.students.length==this.getSize()){
+			throw new IllegalArgumentException();
+			
+		}
+		else {
+			Student temp=student;
+			Student pick;		
+			int siz=this.getSize();
+			for(int i=index;i<siz+1;i++) {
+				pick=this.getStudent(i);
+				this.setStudent(temp, i);
+				temp=pick;
+			}
+			this.setSize(siz+1);
+		}
 		
 	}
 
 	@Override
 	public void remove(int index) {
 		// Add your implementation here
+		if(this.students==null) {
+			throw new IllegalArgumentException();
+		}
+		else if(index <0 || index >=this.students.length ){
+			throw new IllegalArgumentException();
+			
+		
+		}else {
+			int siz=this.getSize();
+			for(int i=index;i<siz;i++) {
+				this.setStudent(this.getStudent(i+1), i);
+			}
+			this.setStudent(null, siz);
+		}
+		
 	}
 
 	@Override

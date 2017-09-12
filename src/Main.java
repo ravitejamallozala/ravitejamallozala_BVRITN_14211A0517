@@ -26,12 +26,17 @@ public class Main {
 		System.out.println("nulll?"+sgrp.getStudent(0));
 		System.out.println("nulll?"+sgrp.getStudent(1));
 		System.out.println("nulll?"+sgrp.getStudent(2));
-		sgrp.addLast(s3);
+		sgrp.add(s3,1);
 		
 		
 		System.out.println("added"+sgrp.getStudent(0));
 		System.out.println("added"+sgrp.getStudent(1));
 		System.out.println("added"+sgrp.getStudent(2));
+		sgrp.remove(1);
+
+		System.out.println("remo"+sgrp.getStudent(0));
+		System.out.println("remo"+sgrp.getStudent(1));
+		System.out.println("remo"+sgrp.getStudent(2));
 		
 		
 		
