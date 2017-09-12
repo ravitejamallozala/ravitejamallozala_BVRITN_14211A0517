@@ -35,7 +35,7 @@ public class Main {
 		System.out.println("added"+sgrp.getStudent(0));
 		System.out.println("added"+sgrp.getStudent(1));
 		System.out.println("added"+sgrp.getStudent(2));
-		Student res=sgrp.getNextStudent(s2);
+		Student res=sgrp.getNextStudent(s3);
 		System.out.println("result "+res);
 		System.out.println("remo"+sgrp.getStudent(0));
 		System.out.println("remo"+sgrp.getStudent(1));

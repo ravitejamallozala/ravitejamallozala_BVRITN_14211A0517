@@ -374,7 +374,11 @@ public class StudentGroup implements StudentArrayOperation {
 				throw new IllegalArgumentException("Student not exist");
 				
 			}else {
-				return this.getStudent(i+1);
+				if(i+1<this.students.length)
+					return this.getStudent(i+1);
+				else {
+					throw new IllegalArgumentException("Student not exist");
+					}
 			}
 			
 		}
